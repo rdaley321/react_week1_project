@@ -7,7 +7,8 @@ export default class PlayListItem extends Component {
   render() {
     return (
       <div className="all-songs">
-        {this.props.songs.map((song) =>
+        {this.props.songs.map((song) => {
+          return(
         <div className= "song"key={song._id}>
           <p><span className="category">User: </span>{song.userName}</p>
           <hr></hr>
@@ -17,6 +18,7 @@ export default class PlayListItem extends Component {
           <hr></hr>
           <p><span className="category">Notes: </span>{song.songNotes}</p>
         </div>
+      )}
         )}
       </div>
     )
